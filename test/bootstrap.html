@@ -77,11 +77,11 @@
                     './props/confetti_small_red.svg'
                 ],
                 options = {
-                    interval: 550,          // rain
+                    interval: 350,      // rain
                     rotate: [-40, 40],
                     size: [10, 15],
-                    duration: [5, 13],      // rain
-                    amount: [30, 40]        // mousemove
+                    duration: [2, 8],   // rain
+                    amount: [30, 40]    // mousemove
                 },
                 radioRain = document.getElementById('rain'),
                 radioMousemove = document.getElementById('mousemove'),
@@ -99,7 +99,7 @@
                 radioRain.checked = true
                 localStorage.setItem('prop', propType[0])
                 document.getElementById('propsjs').innerHTML = ''
-                //prop.reset().rain()
+                prop.reset()
                 prop.rain()
             }
 
@@ -123,9 +123,9 @@
             radioMousemove.addEventListener('change', eventMousemove)
             radioRainWithMousemove.addEventListener('change', eventRainWithMousemove)
 
-            if (propState == propType[1]) eventMousemove
-            else if (propState == propType[2]) eventRainWithMousemove
-            else eventRain
+            if (propState == propType[1]) eventMousemove()
+            else if (propState == propType[2]) eventRainWithMousemove()
+            else eventRain()
         </script>
     </body>
 </html>
