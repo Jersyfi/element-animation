@@ -68,11 +68,11 @@ data-p-element -> Defines that it is a element for movement
 <br>data-p-move -> Factor from 0 to unlimited (float with dots allowed)
 
 ```html
-<div data-p-element data-p-move="0.5">
+<div data-ea-element data-ea-move="0.5">
     Example text or element here.
 </div>
 
-<div data-p-element data-p-move="0.8">
+<div data-ea-element data-ea-move="0.8">
     Secound example text or element here.
 </div>
 ```
