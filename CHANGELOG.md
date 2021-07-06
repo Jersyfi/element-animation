@@ -2,6 +2,13 @@
 
 All notable changes to `propsjs` will be documented in this file.
 
-## v0.0.1 - 2021-25-06
+## v0.1.0 - 2021-07-06
+
+- Added special function `mousemoveElements`
+- Modified Documentation
+- Modified Test file for new function
+- Bug fix with element rotation
+
+## v0.0.1 - 2021-06-25
 
 - Initial uploading
