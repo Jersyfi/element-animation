@@ -1,10 +1,11 @@
 # Changelog
 
-All notable changes to `propsjs` will be documented in this file.
+All notable changes to `element-animation` will be documented in this file.
 
 ## v0.1.0 - 2021-07-06
 
-- Added special function `mousemoveElements`
+- Renamed project from `propsjs` to `element-animation`
+- Added special function `mousemoveElements()`
 - Modified Documentation
 - Modified Test file for new function
 - Bug fix with element rotation
