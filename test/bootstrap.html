@@ -6,7 +6,7 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
-        <title>propsjs Bootstrap Example</title>
+        <title>Element-animation Bootstrap Example</title>
 
         <style>
             body {
@@ -18,18 +18,6 @@
                 align-self: center;
             }
         </style>
-
-        <style>
-            .prop {
-                position: fixed;
-                z-index: 45;
-                left: 50%;
-            }
-
-            .prop-mousemove {
-                top: 50%;
-            }
-        </style>
     </head>
     <body>
         <div class="main container">
@@ -37,30 +25,30 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col text-center">
-                            <h1 data-p-element data-p-move="1">propsjs</h1>
-                            <p data-p-element data-p-move="0.5">You can choose between three different styles of props actions.</p>
+                            <h1 data-ea-element data-ea-move="1">element-animation</h1>
+                            <p data-ea-element data-ea-move="0.5">You can choose between three different styles of props actions.</p>
 
-                            <div data-p-element data-p-move="1" class="text-start d-inline-flex align-items-center gap-3">
+                            <div data-p-element data-ea-move="1" class="text-start d-inline-flex align-items-center gap-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="props" id="rain">
+                                    <input class="form-check-input" type="radio" name="elem-anim" id="rain">
                                     <label class="form-check-label" for="rain">Rain</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="props" id="mousemove">
+                                    <input class="form-check-input" type="radio" name="elem-anim" id="mousemove">
                                     <label class="form-check-label" for="mousemove">Mousemove</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="props" id="rainWithMousemove">
+                                    <input class="form-check-input" type="radio" name="elem-anim" id="rainWithMousemove">
                                     <label class="form-check-label" for="rainWithMousemove">Rain with mousemove</label>
                                 </div>
                             </div>
 
                             <br><br>
-                            <h5 data-p-element>Special Function</h5>
+                            <h5 data-ea-element>Special Function</h5>
 
-                            <div data-p-element data-p-move="0.8" class="text-start d-inline-flex align-items-center gap-3">
+                            <div data-ea-element data-ea-move="0.8" class="text-start d-inline-flex align-items-center gap-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="props" id="mousemoveElements">
+                                    <input class="form-check-input" type="radio" name="elem-anim" id="mousemoveElements">
                                     <label class="form-check-label" for="mousemoveElements">Mousemove Elements</label>
                                 </div>
                             </div>
@@ -70,7 +58,7 @@
             </div>
         </div>
 
-        <div id="propsjs"></div>
+        <div id="element-animation"></div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
