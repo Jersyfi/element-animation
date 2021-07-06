@@ -37,10 +37,10 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col text-center">
-                            <h1>propsjs</h1>
-                            <p>You can open Cookify with the button below. You need to manually call your own Modal how you like it the most.</p>
+                            <h1 data-p-element data-p-move="1">propsjs</h1>
+                            <p data-p-element data-p-move="0.5">You can choose between three different styles of props actions.</p>
 
-                            <div class="text-start">
+                            <div data-p-element data-p-move="1" class="text-start d-inline-flex align-items-center gap-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="props" id="rain">
                                     <label class="form-check-label" for="rain">Rain</label>
@@ -52,6 +52,16 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="props" id="rainWithMousemove">
                                     <label class="form-check-label" for="rainWithMousemove">Rain with mousemove</label>
+                                </div>
+                            </div>
+
+                            <br><br>
+                            <h5 data-p-element>Special Function</h5>
+
+                            <div data-p-element data-p-move="0.8" class="text-start d-inline-flex align-items-center gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="props" id="mousemoveElements">
+                                    <label class="form-check-label" for="mousemoveElements">Mousemove Elements</label>
                                 </div>
                             </div>
                         </div>
@@ -86,10 +96,12 @@
                 radioRain = document.getElementById('rain'),
                 radioMousemove = document.getElementById('mousemove'),
                 radioRainWithMousemove = document.getElementById('rainWithMousemove'),
+                radioMousemoveElements = document.getElementById('mousemoveElements'),
                 propType = {
                     0: 'rain',
                     1: 'mousemove',
-                    2: 'rainWithMousemove'
+                    2: 'rainWithMousemove',
+                    3: 'mousemoveElements'
                 },
                 propState = localStorage.getItem('prop')
 
@@ -106,7 +118,6 @@
             let eventMousemove = () => {
                 radioMousemove.checked = true
                 localStorage.setItem('prop', propType[1])
-                document.getElementById('propsjs').innerHTML = ''
                 prop.reset()
                 prop.mousemove()
             }
@@ -114,17 +125,25 @@
             let eventRainWithMousemove = () => {
                 radioRainWithMousemove.checked = true
                 localStorage.setItem('prop', propType[2])
-                document.getElementById('propsjs').innerHTML = ''
                 prop.reset()
                 prop.rainWithMousemove()
+            }
+
+            let eventMousemoveElements = () => {
+                radioMousemoveElements.checked = true
+                localStorage.setItem('prop', propType[3])
+                prop.reset()
+                prop.mousemoveElements()
             }
 
             radioRain.addEventListener('change', eventRain)
             radioMousemove.addEventListener('change', eventMousemove)
             radioRainWithMousemove.addEventListener('change', eventRainWithMousemove)
+            radioMousemoveElements.addEventListener('change', eventMousemoveElements)
 
             if (propState == propType[1]) eventMousemove()
             else if (propState == propType[2]) eventRainWithMousemove()
+            else if (propState == propType[3]) eventMousemoveElements()
             else eventRain()
         </script>
     </body>
