@@ -1,4 +1,4 @@
-export default class propjs {
+export default class elementAnimation {
     constructor(container = null, props = [], options = {}) {
         this.container = container
         this.props = props
@@ -17,7 +17,7 @@ export default class propjs {
      */
     rain() {
         let render = () => {
-            const propElem = document.createElement('div'),
+            const Elem = document.createElement('div'),
                 img = document.createElement('img'),
                 selectedProp = this.props[Math.floor(Math.random() * this.props.length)]
 
@@ -28,12 +28,12 @@ export default class propjs {
             var rotate = this.getRandomInt(r ? r[0] : -40, r ? r[1] : 40),
                 duration = this.getRandomInt(d ? d[0] : 5, d ? d[1] : 13)
 
-            propElem.classList.add('prop', 'prop-rain')
-            propElem.style.left = Math.random() * 100 + '%'
-            propElem.style.position = 'fixed'
-            propElem.style.zIndex = 45
-            propElem.style.top = '-20vh'
-            propElem.animate([
+            Elem.classList.add('element-animation')
+            Elem.style.left = Math.random() * 100 + '%'
+            Elem.style.position = 'fixed'
+            Elem.style.zIndex = 45
+            Elem.style.top = '-20vh'
+            Elem.animate([
                 { transform: 'translateY(0)' },
                 { transform: 'translateX(' + this.getRandomInt(5, 5)  + 'vw) translateY(120vh)' }
             ], {
@@ -47,15 +47,15 @@ export default class propjs {
             })
             img.width = this.getRandomInt(s ? s[0] : 10, s = s ? s[1] : 15)
             img.src = selectedProp
-            propElem.appendChild(img)
-            this.container.appendChild(propElem)
+            Elem.appendChild(img)
+            this.container.appendChild(Elem)
 
             setTimeout(() => {
-                propElem.remove()
+                Elem.remove()
             }, 15000)
         }
 
-        window.propInterval = setInterval(render, this.options.interval ?? 550)
+        window.elementAnimationInterval = setInterval(render, this.options.interval ?? 550)
     }
 
     /**
@@ -70,23 +70,23 @@ export default class propjs {
             window.propAmount = this.getRandomInt(a ? a[0] : 30, a ? a[1] : 40)
 
             for (let i = 0; i < window.propAmount; i++) {
-                const propElem = document.createElement('div'),
+                const Elem = document.createElement('div'),
                     img = document.createElement('img'),
                     selectedProp = this.props[Math.floor(Math.random() * this.props.length)]
 
-                propElem.classList.add('prop', 'prop-mousemove')
-                propElem.classList.add('prop-mousemove-' + i)
-                propElem.style.position = 'fixed'
-                propElem.style.zIndex = 45
-                propElem.style.top = Math.random() * 100 + 'vh'
-                propElem.style.left = Math.random() * 100 + 'vw'
-                propElem.setAttribute('data-p-move', Math.random() * 10)
+                Elem.classList.add('element-animation')
+                Elem.classList.add('element-animation-mousemove-' + i)
+                Elem.style.position = 'fixed'
+                Elem.style.zIndex = 45
+                Elem.style.top = Math.random() * 100 + 'vh'
+                Elem.style.left = Math.random() * 100 + 'vw'
+                Elem.setAttribute('data-ea-move', Math.random() * 10)
                 img.style.transform = 'rotate(' + this.getRandomInt(r ? r[0] : -40, r ? r[1] : 40) + 'deg)'
                 img.width = this.getRandomInt(s ? s[0] : 10, s = s ? s[1] : 15)
                 img.src = selectedProp
 
-                propElem.appendChild(img)
-                this.container.appendChild(propElem)
+                Elem.appendChild(img)
+                this.container.appendChild(Elem)
             }
 
             document.body.addEventListener('mousemove', this.handleMousemove)
@@ -100,7 +100,7 @@ export default class propjs {
      */
     rainWithMousemove() {
         let render = () => {
-            const propElem = document.createElement('div'),
+            const Elem = document.createElement('div'),
                 img = document.createElement('img'),
                 selectedProp = this.props[Math.floor(Math.random() * this.props.length)]
 
@@ -111,18 +111,18 @@ export default class propjs {
             var rotate = this.getRandomInt(r ? r[0] : -40, r ? r[1] : 40),
                 duration = this.getRandomInt(d ? d[0] : 5, d ? d[1] : 13)
 
-            propElem.classList.add('prop', 'prop-rainwithmousemove')
-            propElem.style.left = Math.random() * 100 + '%'
-            propElem.style.position = 'fixed'
-            propElem.style.zIndex = 45
-            propElem.style.top = '-20vh'
-            propElem.animate([
+            Elem.classList.add('element-animation')
+            Elem.style.left = Math.random() * 100 + '%'
+            Elem.style.position = 'fixed'
+            Elem.style.zIndex = 45
+            Elem.style.top = '-20vh'
+            Elem.animate([
                 { transform: 'translateY(0)' },
                 { transform: 'translateX(' + this.getRandomInt(5, 5)  + 'vw) translateY(120vh)' }
             ], {
                 duration: duration * 1000,
             })
-            propElem.setAttribute('data-p-move', Math.random() * 10)
+            Elem.setAttribute('data-ea-move', Math.random() * 10)
             img.animate([
                 { transform: 'rotate(' + rotate  + 'deg)' },
                 { transform: 'rotate(' + this.getRandomInt(rotate - 10, rotate + 10)  + 'deg)' }
@@ -131,17 +131,17 @@ export default class propjs {
             })
             img.width = this.getRandomInt(s ? s[0] : 10, s = s ? s[1] : 15)
             img.src = selectedProp
-            propElem.appendChild(img)
-            this.container.appendChild(propElem)
+            Elem.appendChild(img)
+            this.container.appendChild(Elem)
 
             setTimeout(() => {
-                propElem.remove()
+                Elem.remove()
             }, 15000)
 
-            document.body.addEventListener('mousemove', this.handleRainWithMousemove(propElem))
+            document.body.addEventListener('mousemove', this.handleRainWithMousemove(Elem))
         }
 
-        window.propInterval = setInterval(render, this.options.interval ?? 550)
+        window.elementAnimationInterval = setInterval(render, this.options.interval ?? 550)
     }
 
     mousemoveElements() {
@@ -171,7 +171,7 @@ export default class propjs {
      */
     reset() {
         this.container.innerHTML = ''
-        clearInterval(window.propInterval)
+        clearInterval(window.elementAnimationInterval)
         document.body.removeEventListener('mousemove', this.handleMousemove)
         document.body.removeEventListener('mousemove', this.handleRainWithMousemove)
         document.body.removeEventListener('mousemove', this.handleMousemoveElements)
@@ -197,11 +197,11 @@ export default class propjs {
         }
 
         for (let i = 0; i < window.propAmount; i++) {
-            const propElem = document.getElementsByClassName('prop-mousemove-' + i)[0],
-                x = calc(ww, cx) * (propElem.getAttribute('data-p-move') / 5.5),
-                y = calc(wh, cy) * (propElem.getAttribute('data-p-move') / 5.5)
+            const Elem = document.getElementsByClassName('element-animation-mousemove-' + i)[0],
+                x = calc(ww, cx) * (Elem.getAttribute('data-ea-move') / 5.5),
+                y = calc(wh, cy) * (Elem.getAttribute('data-ea-move') / 5.5)
 
-            propElem.style.transform = 'translateX(' + x + 'vw) translateY(' + y + 'vh)'
+            Elem.style.transform = 'translateX(' + x + 'vw) translateY(' + y + 'vh)'
         }
     }
 
@@ -209,9 +209,9 @@ export default class propjs {
      * Handles the rainWithMousemove event
      * 
      * @param {*} event 
-     * @param {*} propElem 
+     * @param {*} Elem 
      */
-    handleRainWithMousemove(event, propElem) {
+    handleRainWithMousemove(event, Elem) {
         const ww = window.innerWidth
         const wh = window.innerHeight
         const cx = event.clientX
@@ -221,11 +221,11 @@ export default class propjs {
             return (client - (inner / 2)) / (inner * 0.05)
         }
 
-        const x = calc(ww, cx) * (propElem.getAttribute('data-p-move') / 5.5)
-        const y = calc(wh, cy) * (propElem.getAttribute('data-p-move') / 5.5)
+        const x = calc(ww, cx) * (Elem.getAttribute('data-ea-move') / 5.5)
+        const y = calc(wh, cy) * (Elem.getAttribute('data-ea-move') / 5.5)
 
-        propElem.style.marginLeft = x + 'px'
-        propElem.style.marginTop = y + 'px'
+        Elem.style.marginLeft = x + 'px'
+        Elem.style.marginTop = y + 'px'
     }
 
     handleMousemoveElements(event) {
@@ -234,19 +234,19 @@ export default class propjs {
             cx = event.clientX,
             cy = event.clientY
 
-        const propElems = document.querySelectorAll('[data-p-element]')
+        const Elems = document.querySelectorAll('[data-ea-element]')
 
         var calc = (inner, client) => {
             return (client - (inner / 2)) / (inner * 0.05)
         }
 
-        for (const propElem of propElems) {
-            const move = propElem.getAttribute('data-p-move') ?? 1
+        for (const Elem of Elems) {
+            const move = Elem.getAttribute('data-ea-move') ?? 1
 
             const x = calc(ww, cx) * (move / 5.5),
                 y = calc(wh, cy) * (move / 5.5)
 
-            propElem.style.transform = 'translateX(' + x + 'vw) translateY(' + y + 'vh)'
+            Elem.style.transform = 'translateX(' + x + 'vw) translateY(' + y + 'vh)'
         }
     }
 }
