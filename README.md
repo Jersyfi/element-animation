@@ -1,4 +1,4 @@
-# propsjs
+# element-animation
 
 ## What is this project for?
 You can use this project to create congratulation confetti, snow or leaves falling from top to bottom or moved by mouse. Also elements insider your hole document can be moved by mouse movement. With this project you can create awesome effects on your website.
@@ -6,9 +6,9 @@ You can use this project to create congratulation confetti, snow or leaves falli
 Start with a simple test file to see what the project can do without coding yourself. First you need to download the project and then go to the [TEST](./test/) folder and preview the bootstrap html file.
 
 ## Get started
-Simple start with propsjs
+Simple start with element-animation
 ```javascript
-new propsjs(container, props, options).rain()
+new elementAnimation(container, props, options).rain()
 ```
 
 You can use the functions `rain()`, `mousemouve()`, `rainWithMousemove()` and a special function `mousemoveElements()`
@@ -16,11 +16,11 @@ You can use the functions `rain()`, `mousemouve()`, `rainWithMousemove()` and a 
 For the functions `rain()`, `mousemouve()` and `rainWithMousemove()` you need to define a container.
 
 ```html
-<div id="propsjs"></div>
+<div id="element-animation"></div>
 ```
 
 ```javascript
-const container = document.getElementById('propsjs')
+const container = document.getElementById('element-animation')
 ```
 
 For the props you need to define a array with the sources to the images.
@@ -44,24 +44,23 @@ options = {
 }
 ```
 
-
 ## Functions
 
 All functions except `mousemoveElements()` need a container for the generated elements.
 
 ### rain()
 ```javascript
-new propsjs(container, props, options).rain()
+new elementAnimation(container, props, options).rain()
 ```
 
 ### mousemove()
 ```javascript
-new propsjs(container, props, options).mousemove()
+new elementAnimation(container, props, options).mousemove()
 ```
 
 ### rainWithMousemove()
 ```javascript
-new propsjs(container, props, options).rainWithMousemove()
+new elementAnimation(container, props, options).rainWithMousemove()
 ```
 
 ### mousemoveElements()
@@ -79,7 +78,7 @@ data-p-element -> Defines that it is a element for movement
 ```
 
 ```javascript
-new propsjs(container, props, options).mousemoveElements()
+new elementAnimation(container, props, options).mousemoveElements()
 ```
 
 ## Helpers
@@ -89,8 +88,8 @@ Can be used to reset all prop actions.
 After a reset you can call another functions
 
 ```javascript
-const prop = new propsjs(container, props, options).rain()
+const elemAnim = new elementAnimation(container, props, options).rain()
 
-prop.reset()
-prop.mousemove()
+elemAnim.reset()
+elemAnim.mousemove()
 ```
