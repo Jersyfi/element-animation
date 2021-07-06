@@ -2,7 +2,7 @@
 
 All notable changes to `element-animation` will be documented in this file.
 
-## v0.1.0 - 2021-07-06
+## v0.2.0 - 2021-07-06
 
 - Renamed project from `propsjs` to `element-animation`
 - Added special function `mousemoveElements()`
