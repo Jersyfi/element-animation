@@ -5,7 +5,9 @@ You can use this project to create congratulation confetti, snow or leaves falli
 
 Start with a simple test file to see what the project can do without coding yourself. First you need to download the project and then go to the [TEST](./test/) folder and preview the bootstrap html file.
 
-## Get started
+## Documentation
+
+### Get started
 Simple start with element-animation
 ```javascript
 new elementAnimation(container, props, options).rain()
@@ -44,26 +46,26 @@ options = {
 }
 ```
 
-## Functions
+### Functions
 
 All functions except `mousemoveElements()` need a container for the generated elements.
 
-### rain()
+#### rain()
 ```javascript
 new elementAnimation(container, props, options).rain()
 ```
 
-### mousemove()
+#### mousemove()
 ```javascript
 new elementAnimation(container, props, options).mousemove()
 ```
 
-### rainWithMousemove()
+#### rainWithMousemove()
 ```javascript
 new elementAnimation(container, props, options).rainWithMousemove()
 ```
 
-### mousemoveElements()
+#### mousemoveElements()
 data-p-element -> Defines that it is a element for movement
 <br>data-p-move -> Factor from 0 to unlimited (float with dots allowed)
 
@@ -81,9 +83,9 @@ data-p-element -> Defines that it is a element for movement
 new elementAnimation(container, props, options).mousemoveElements()
 ```
 
-## Helpers
+### Helpers
 
-### reset()
+#### reset()
 Can be used to reset all prop actions.
 After a reset you can call another functions
 
@@ -93,3 +95,13 @@ const elemAnim = new elementAnimation(container, props, options).rain()
 elemAnim.reset()
 elemAnim.mousemove()
 ```
+
+## Changelog
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Credits
+- [Jérôme Bastian Winkel](https://github.com/jersyfi)
+- [All Contributors](../../contributors)
+
+## License
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
