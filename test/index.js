@@ -1,6 +1,6 @@
-import propsjs from '../src/index.js'
+import elementAnimation from '../src/index.js'
 
-const container = document.getElementById('propsjs'),
+const container = document.getElementById('element-animation'),
     props = [
         './props/confetti_large_big_blue.svg',
         './props/confetti_large_green.svg',
@@ -20,43 +20,42 @@ const container = document.getElementById('propsjs'),
     radioMousemove = document.getElementById('mousemove'),
     radioRainWithMousemove = document.getElementById('rainWithMousemove'),
     radioMousemoveElements = document.getElementById('mousemoveElements'),
-    propType = {
+    elemAnimType = {
         0: 'rain',
         1: 'mousemove',
         2: 'rainWithMousemove',
         3: 'mousemoveElements'
     },
-    propState = localStorage.getItem('prop')
+    elemAnimState = localStorage.getItem('element-animation')
 
-var prop = new propsjs(container, props, options)
+var elemAnim = new elementAnimation(container, props, options)
 
 let eventRain = () => {
     radioRain.checked = true
-    localStorage.setItem('prop', propType[0])
-    document.getElementById('propsjs').innerHTML = ''
-    prop.reset()
-    prop.rain()
+    localStorage.setItem('element-animation', elemAnimType[0])
+    elemAnim.reset()
+    elemAnim.rain()
 }
 
 let eventMousemove = () => {
     radioMousemove.checked = true
-    localStorage.setItem('prop', propType[1])
-    prop.reset()
-    prop.mousemove()
+    localStorage.setItem('element-animation', elemAnimType[1])
+    elemAnim.reset()
+    elemAnim.mousemove()
 }
 
 let eventRainWithMousemove = () => {
     radioRainWithMousemove.checked = true
-    localStorage.setItem('prop', propType[2])
-    prop.reset()
-    prop.rainWithMousemove()
+    localStorage.setItem('element-animation', elemAnimType[2])
+    elemAnim.reset()
+    elemAnim.rainWithMousemove()
 }
 
 let eventMousemoveElements = () => {
     radioMousemoveElements.checked = true
-    localStorage.setItem('prop', propType[3])
-    prop.reset()
-    prop.mousemoveElements()
+    localStorage.setItem('element-animation', elemAnimType[3])
+    elemAnim.reset()
+    elemAnim.mousemoveElements()
 }
 
 radioRain.addEventListener('change', eventRain)
@@ -64,7 +63,7 @@ radioMousemove.addEventListener('change', eventMousemove)
 radioRainWithMousemove.addEventListener('change', eventRainWithMousemove)
 radioMousemoveElements.addEventListener('change', eventMousemoveElements)
 
-if (propState == propType[1]) eventMousemove()
-else if (propState == propType[2]) eventRainWithMousemove()
-else if (propState == propType[3]) eventMousemoveElements()
+if (elemAnimState == elemAnimType[1]) eventMousemove()
+else if (elemAnimState == elemAnimType[2]) eventRainWithMousemove()
+else if (elemAnimState == elemAnimType[3]) eventMousemoveElements()
 else eventRain()
