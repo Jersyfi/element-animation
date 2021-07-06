@@ -5,6 +5,7 @@ All notable changes to `element-animation` will be documented in this file.
 ## v0.2.1 - 2021-07-06
 
 - Modified Documentation
+- Modified package.json
 
 ## v0.2.0 - 2021-07-06
 
