@@ -1,6 +1,6 @@
 {
     "name": "propsjs",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "",
     "main": "src/index.js",
     "scripts": {
@@ -12,7 +12,15 @@
     },
     "keywords": [
       "Props",
-      "propsjs"
+      "propsjs",
+      "javascript",
+      "js",
+      "mousemove",
+      "rain",
+      "falling-snow",
+      "prop",
+      "moving-particles",
+      "falling-leaves"
     ],
     "author": "Jérôme Bastian Winkel",
     "license": "MIT",
