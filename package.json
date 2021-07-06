@@ -1,6 +1,6 @@
 {
   "name": "element-animation",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Prop actions for example falling snow or leaves or just moving props or elements with mousemove in pure javascript.",
   "main": "src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jersyfi/propsjs.git"
+    "url": "https://github.com/jersyfi/element-animation.git"
   },
   "keywords": [
     "Props",
@@ -27,7 +27,7 @@
   "author": "Jérôme Bastian Winkel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jersyfi/propsjs/issues"
+    "url": "https://github.com/jersyfi/element-animation/issues"
   },
-  "homepage": "https://github.com/jersyfi/propsjs#readme"
+  "homepage": "https://github.com/jersyfi/element-animation#readme"
 }
