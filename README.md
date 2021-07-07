@@ -8,14 +8,29 @@ Start with a simple test file to see what the project can do without coding your
 ## Documentation
 
 ### Get started
-Simple start with element-animation
-```javascript
-new elementAnimation(container, props, options).rain()
+
+To start with the project element-animation you need to install via NPM and then import it.
+
+```bash
+npm i element-animation
 ```
 
-You can use the functions `rain()`, `mousemouve()`, `rainWithMousemove()` and a special function `mousemoveElements()`
+```javascript
+import elementAnimation from element-animation
 
-For the functions `rain()`, `mousemouve()` and `rainWithMousemove()` you need to define a container.
+var elemAnim = new elementAnimation(
+    container,
+    props,
+    options
+)
+```
+
+container -> DOMElement (default: null) \
+props -> Array (default: []) \
+options -> Object (default: {})
+
+Before we start to define the variables you need to know that you only need `container` and `props` when using the functions `rain()`, `mousemove()` and `rainWithMousemove()`.
+First we start with the container. Here you need to give a DOMElement for example a simple `<div></div>` container.
 
 ```html
 <div id="element-animation"></div>
@@ -25,7 +40,7 @@ For the functions `rain()`, `mousemouve()` and `rainWithMousemove()` you need to
 const container = document.getElementById('element-animation')
 ```
 
-For the props you need to define a array with the sources to the images.
+Then you need to define props. There you give an array with the sources to the images like .jpg or .svg.
 
 ```javascript
 props = [
@@ -34,7 +49,7 @@ props = [
 ]
 ```
 
-All awailable options. Need to be an Object.
+For the options you have the following possibilities. When a comment is behind a option it means that the option is only for a specific funtion.
 
 ```javascript
 options = {
@@ -45,6 +60,8 @@ options = {
     amount: [30, 40]        // mousemove
 }
 ```
+
+Now you need to call one of the given functions [described down below](#functions) to visially see the animation. Choose between `rain()`, `mousemove()`, `rainWithMousemove()` and a special function `mousemoveElements()`.
 
 ### Functions
 
