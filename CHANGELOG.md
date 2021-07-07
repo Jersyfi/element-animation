@@ -2,6 +2,10 @@
 
 All notable changes to `element-animation` will be documented in this file.
 
+## v0.2.2 - 2021-07-07
+
+- Modified Documentation
+
 ## v0.2.1 - 2021-07-06
 
 - Modified Documentation
