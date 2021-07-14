@@ -112,6 +112,7 @@ export default class elementAnimation {
                 duration = this.getRandomInt(d ? d[0] : 5, d ? d[1] : 13)
 
             Elem.classList.add('element-animation')
+            Elem.classList.add('element-animation-rainwithmousemove')
             Elem.style.left = Math.random() * 100 + '%'
             Elem.style.position = 'fixed'
             Elem.style.zIndex = 45
@@ -138,7 +139,7 @@ export default class elementAnimation {
                 Elem.remove()
             }, 15000)
 
-            document.body.addEventListener('mousemove', this.handleRainWithMousemove(Elem))
+            document.body.addEventListener('mousemove', this.handleRainWithMousemove)
         }
 
         window.elementAnimationInterval = setInterval(render, this.options.interval ?? 550)
@@ -211,21 +212,25 @@ export default class elementAnimation {
      * @param {*} event 
      * @param {*} Elem 
      */
-    handleRainWithMousemove(event, Elem) {
-        const ww = window.innerWidth
-        const wh = window.innerHeight
-        const cx = event.clientX
-        const cy = event.clientY
+    handleRainWithMousemove(event) {
+        const ww = window.innerWidth,
+            wh = window.innerHeight,
+            cx = event.clientX,
+            cy = event.clientY
 
         var calc = (inner, client) => {
             return (client - (inner / 2)) / (inner * 0.05)
         }
 
-        const x = calc(ww, cx) * (Elem.getAttribute('data-ea-move') / 5.5)
-        const y = calc(wh, cy) * (Elem.getAttribute('data-ea-move') / 5.5)
+        const Elems = document.getElementsByClassName('element-animation-rainwithmousemove')
 
-        Elem.style.marginLeft = x + 'px'
-        Elem.style.marginTop = y + 'px'
+        for (const Elem of Elems) {
+            const x = calc(ww, cx) * (Elem.getAttribute('data-ea-move') / 5.5),
+                y = calc(wh, cy) * (Elem.getAttribute('data-ea-move') / 5.5)
+
+            Elem.style.marginLeft = x + 'px'
+            Elem.style.marginTop = y + 'px'
+        }        
     }
 
     handleMousemoveElements(event) {
