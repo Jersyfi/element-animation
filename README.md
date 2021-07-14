@@ -1,3 +1,10 @@
+<p align="center"><img src="/img/socialcard.jpg" alt="Social Card of element-animation"></p>
+
+![NPM Downloads](https://img.shields.io/npm/dt/element-animation)
+![NPM](https://img.shields.io/npm/v/element-animation)
+![Github Code Size](https://img.shields.io/github/languages/code-size/jersyfi/element-animation)
+![GitHub License](https://img.shields.io/github/license/jersyfi/element-animation)
+
 # element-animation
 
 ## What is this project for?
