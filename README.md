@@ -10,7 +10,7 @@
 ## What is this project for?
 You can use this project to create congratulation confetti, snow or leaves falling from top to bottom or moved by mouse. Also elements insider your hole document can be moved by mouse movement. With this project you can create awesome effects on your website.
 
-Start with a simple test file to see what the project can do without coding yourself. First you need to download the project and then go to the [TEST](./test/) folder and preview the bootstrap html file.
+Start with a simple test file to see what the project can do without coding yourself. First you need to download the project and then go to the [test](./test/) folder and preview the bootstrap html file.
 
 ## Documentation
 
