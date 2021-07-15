@@ -1,6 +1,6 @@
 {
   "name": "element-animation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prop actions for example falling snow or leaves or just moving props or elements with mousemove in pure javascript.",
   "main": "src/index.js",
   "scripts": {
