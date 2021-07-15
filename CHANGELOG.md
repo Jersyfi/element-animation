@@ -2,6 +2,10 @@
 
 All notable changes to `element-animation` will be documented in this file.
 
+## v1.0.1 - 2021-07-15
+
+- Fixed wrong query name
+
 ## v1.0.0 - 2021-07-14
 
 - Fixed bug with function `rainWithMoousemove()`
