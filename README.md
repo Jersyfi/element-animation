@@ -12,6 +12,9 @@ You can use this project to create congratulation confetti, snow or leaves falli
 
 Start with a simple test file to see what the project can do without coding yourself. First you need to download the project and then go to the [test](./test/) folder and preview the bootstrap html file.
 
+### Live preview
+View the test file live on GitHub Pages with clicking [here](https://jersyfi.github.io/element-animation/test/bootstrap.html).
+
 ## Documentation
 
 ### Get started
